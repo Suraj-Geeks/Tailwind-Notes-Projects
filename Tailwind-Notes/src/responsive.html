@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Responsive flex box & grid</title>
+</head>
+
+<body>
+    <!-- overflow-hidden:To keep image within a flex container. md:max-w-full: enables the conatiner in full screen -->
+    <div class="mx-auto md:flex max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-full">
+
+        <!-- md:flex is used to make the container flex on medium & above size screen. -->
+        <div class="md:shrink-0">
+            <!-- lg:shrink-0 is used to make the image responsive, this div wraps the image & prevent it from shrinking, which means it doesn't lose its original size even on small screens. -->
+
+            <img class="h-48 w-full object-cover md:h-full md:w-48" src="./AppleInc..jpg" alt="Apple Company" />
+            <!-- h-48 & w-full is for small screen, md:h-full & md:w-48 is for medium & above size screen, object-cover is for an Image that cover space without lossing dimension & without stretching 
+                 
+              What Happens Without object-cover?
+              The image might stretch or get squished if the container size changes. This is because the default behavior of an image is to maintain its aspect ratio, which can cause it to overflow or leave empty space in the container.
+
+                Class	                Behavior
+             object-cover:	Crops the image if needed but maintains aspect ratio. ✅
+             object-contain:	Fits the entire image inside without cropping, but may leave empty space.
+             object-fill:	Stretches the image to fully cover the container, possibly distorting it.
+             object-none:	Displays the image at its original size, potentially causing overflow.
+             -->
+
+        </div>
+
+        <div class="p-8">
+            <div class="text-purple-500 uppercase">Apple Incorporated</div>
+
+            <a href="#" class="mt-2 block text-lg leading-loose font-medium text-black hover:underline">
+                <!-- mt: margin-top used to have space above, mb:margin-bottom used to have space below, my: used to have both above & below space.  leading: used for space between two or  multiple lines of text -->
+                The giant tech company
+            </a>
+            <p class="mt-2 break-words">The founder of the gian tech company Appple is Steve Jobs & Steve Wozniak. They
+                invented
+                the first apple I in 1977 and after one year apple II.</p>
+
+            <!-- Manual Line Break with <br>: Insert a <br> tag where you want the text to break.
+              Auto Wrapping with break-words: Let the text wrap naturally based on the container size.
+              Forced Breaking with break-all: Break long words at any point to avoid overflow. -->
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
