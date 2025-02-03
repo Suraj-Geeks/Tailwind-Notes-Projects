@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- hover on button & input -->
+    <!-- <div class="mx-auto flex justify-center max-w-sm p-3 border border-purple-600 gap-6 rounded-2xl shadow-lg hover:border-transparent hover:bg-indigo-500 transition duration-1000 ease-in-out">
+
+        <img class="rounded-full size-25 shrink-0" src="./SteveWithMac.jpg" alt="Jobs">
+
+        <div class="flex flex-col justify-center gap-y-1.5">
+            <h1 class="text-2xl font-bold text-pink-400">Steve Jobs</h1>
+            <p class="text-lg font-bold">Enterpreneur</p>
+            <button class="text-green-500 font-mono border border-pink-400 rounded-full hover:bg-purple-500 hover:border-transparent hover:text-white disabled:bg-gray-300 disabled:cursor-not-allowed"disabled>SayHello!</button>
+        </div>
+
+    </div> -->
+
+<!----------------------------------------------- disable---------------------------------------------------------->
+
+    <!-- disable element cannot be interacted -->
+    <!-- <button class="mx-auto flex max-w-sm my-4 bg-blue-500 text-red-500 px-4 py-2 rounded-lg hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed"disabled>
+        Click Me 
+      </button> -->
+
+    <!-- If you want a hover effect only when the button is enabled, you can use group in Tailwind.-->
+
+    <!-- On this case, since button is diabled, there will be no interaction of any utility class -->
+    <!-- <div class="group">
+
+        <button class="mx-auto flex justify-center max-w-sm border rounded-full p-4 hover:bg-blue-400 disabled:bg-red-500 disabled:cursor-not-allowed"disabled>
+            Hello disabled utility
+        </button>
+      </div> -->
+
+    <!-- On this case, since diabled utility class is removed from button, child element will change bg color blue when it's parent is hovered and this is due to group class.Basically, You should use class="group" only when you need to apply styles to a child element based on the parent's state. -->
+    <!-- <div class="group">
+        <button class="bg-pink-500 text-white px-4 py-2 rounded-lg group-hover:bg-blue-600 disabled:bg-gray-400 disabled:cursor-not-allowed">
+          Click Me
+        </button> -->
+    <!-- </div> -->
+
+    <!------------------------------------ focus: & group-focus: ---------------------------------------------->
+
+    <!-- focus: & group-focus: =>These are useful for accessibility and improving user experience in forms, buttons, and interactive components. -->
+
+<!-- 📝 Explanation:
+focus:border-blue-500 → Changes border color to blue on focus.
+focus:ring-2 focus:ring-blue-300 → Adds a blue ring around the input field when focused.
+
+✅ When does this trigger?
+When the user clicks on the input field.
+When the user navigates to it using Tab on the keyboard. -->
+
+    <!-- I used focus:ring,so I got outline black with blue ring of 8px while input focused on hit tab or clicking it. -->
+    <input type="text" class="mx-8 my-8 border border-purple-600 p-4 rounded-2xl focus:ring-8 focus:ring-blue-500" placeholder="Focus me">
+
+<!--I used focus:border & add outline-none,so removed the default browser outlineg by outline-none and got border yellow with 4px while input focused on hit tab or clicking it.-->
+    <input type="text" class="mx-8 my-8 border border-pink-600 p-4 rounded-2xl focus:border-4 focus:border-yellow-500 outline-none" placeholder="Tab me">
+
+
+    <!------------------------------------------------- group-focus--------------------------------------------------------->
+
+    <!-- group-focus: is used to apply styles to a child element based on the parent's focus state. -->
+
+    <!-- I used group-focus: & group-focus-within: to change the color of the label when the input field is focused. -->
+
+<!-- <div class="group">
+<button class="border-2 rounded-full p-3 font-bold bg-green-500 group-hover:bg-purple-600 text-white">Hello group-focus</button>  
+</div> -->
+
+    <!-- <div class="group">
+        <label class="text-black font-bold group-focus-within:text-red-400">Username</label>
+        <input type="text" class="border border-gray-300 px-4 py-2 rounded-md focus:border-blue-500 outline-none">
+      </div>-->
+      
+</body> 
+</html>
